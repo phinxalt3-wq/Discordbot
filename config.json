@@ -1,0 +1,125 @@
+{
+  "token": "",
+  "client_id": "",
+  "owner_id": "719325661931634709",
+  "defaults": {
+    "payments": [
+      "Crypto"
+    ],
+    "coins": {
+      "buy_base_price": 0.0375,
+      "sell_base_price": 0.015
+    },
+    "mfa_prices": {
+      "buy": {
+        "NON": 7.0,
+        "VIP": 8.0,
+        "VIP+": 9.5,
+        "MVP": 11.0,
+        "MVP+": 17.0
+      },
+      "sell": {
+        "NON": 6.0,
+        "VIP": 7.0,
+        "VIP+": 8.5,
+        "MVP": 10.0,
+        "MVP+": 15.0
+      }
+    },
+    "ticket_categories": {
+      "sell_account": {
+        "enabled": true,
+        "name": "Sell Account",
+        "emoji": "🎫",
+        "color": 2303786,
+        "description": "Submit a ticket to sell an account"
+      },
+      "sell_profile": {
+        "enabled": true,
+        "name": "Sell Profile",
+        "emoji": "📋",
+        "color": 2303786,
+        "description": "Submit a ticket to sell a profile"
+      },
+      "sell_alt": {
+        "enabled": true,
+        "name": "Sell Alt",
+        "emoji": "🔑",
+        "color": 2303786,
+        "description": "Submit a ticket to sell an alt account"
+      },
+      "sell_mfa": {
+        "enabled": true,
+        "name": "Sell MFA",
+        "emoji": "🔐",
+        "color": 2303786,
+        "description": "Submit a ticket to sell MFAs"
+      },
+      "buy_coins": {
+        "enabled": true,
+        "name": "Buy Coins",
+        "emoji": "💰",
+        "color": 3447003,
+        "description": "Submit a ticket to buy coins"
+      },
+      "sell_coins": {
+        "enabled": true,
+        "name": "Sell Coins",
+        "emoji": "💵",
+        "color": 2303786,
+        "description": "Submit a ticket to sell coins"
+      },
+      "buy_account": {
+        "enabled": true,
+        "name": "Buy Account",
+        "emoji": "🛒",
+        "color": 3447003,
+        "description": "Submit a ticket to buy an account"
+      },
+      "buy_mfa": {
+        "enabled": true,
+        "name": "Buy MFA",
+        "emoji": "🔐",
+        "color": 3447003,
+        "description": "Submit a ticket to buy MFAs"
+      }
+    },
+    "ticket_settings": {
+      "auto_close": false,
+      "auto_close_timeout": 86400,
+      "create_threads": false,
+      "thread_type": "private",
+      "naming_format": "{type}-{username}",
+      "ping_staff": true,
+      "ping_role": null
+    },
+    "embed_settings": {
+      "footer_text": " Hypixel Account Shop",
+      "footer_icon": null,
+      "colors": {
+        "ticket": 2303786,
+        "mfa": 2303786,
+        "coin": 3447003,
+        "success": 3066993,
+        "error": 15158332,
+        "info": 3447003
+      }
+    },
+    "channels": {
+      "tickets": null,
+      "vouches": null,
+      "logs": null,
+      "announcements": null
+    },
+    "roles": {
+      "staff": null,
+      "admin": null,
+      "moderator": null
+    }
+  },
+  "images": {
+    "ticket_banner": null,
+    "mfa_banner": null,
+    "coin_banner": null
+  }
+}
