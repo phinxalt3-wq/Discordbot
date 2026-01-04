@@ -90,19 +90,22 @@ class Panels(commands.Cog):
 
         ranks = ["NON", "VIP", "VIP+", "MVP", "MVP+"]
         
-        # Build price table
-        price_lines = []
+        # Build price table using inline fields for better mobile support
+        rank_col = []
+        buy_col = []
+        sell_col = []
+        
         for rank in ranks:
             buy = format_rank_price(buy_prices, rank)
             sell = format_rank_price(sell_prices, rank)
-            # Use monospaced font for alignment
-            price_lines.append(f"{rank:<6} | Buy: {buy:<7} | Sell: {sell}")
+            
+            rank_col.append(f"**{rank}**")
+            buy_col.append(buy)
+            sell_col.append(sell)
 
-        embed.add_field(
-            name="💸  **Current Rates**",
-            value="```ini\n[Rank]   [Buy]      [Sell]\n" + "\n".join(price_lines) + "\n```",
-            inline=False
-        )
+        embed.add_field(name="Rank", value="\n".join(rank_col), inline=True)
+        embed.add_field(name="Buy Price", value="\n".join(buy_col), inline=True)
+        embed.add_field(name="Sell Price", value="\n".join(sell_col), inline=True)
         
         if banner_url:
             embed.set_image(url=banner_url)

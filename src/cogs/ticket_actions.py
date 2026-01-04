@@ -35,6 +35,12 @@ class TicketActions(commands.Cog):
 
             await TicketManager.close(interaction)
             await interaction.response.send_message("Ticket closed", ephemeral=True)
+            
+            # Delete channel if it's a thread or ticket channel
+            try:
+                await interaction.channel.delete(reason="Ticket closed via button")
+            except Exception as e:
+                pass
 
 
 async def setup(bot):

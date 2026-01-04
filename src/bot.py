@@ -40,6 +40,7 @@ class ShopBot(commands.Bot):
         self.add_view(CoinPanel())
         self.add_view(AccountBuyPanel())
         self.add_view(OpenedTicketView())
+        self.add_view(VouchButtonView())
         
         # Load cogs
         await self.load_extension("src.cogs.owner")

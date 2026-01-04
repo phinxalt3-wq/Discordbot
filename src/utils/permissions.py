@@ -7,11 +7,12 @@ def is_owner(interaction: discord.Interaction) -> bool:
     guild_cfg = storage.get_config(interaction.guild_id)
     
     # Check global owner
-    if app_cfg.get("owner_id") and interaction.user.id == app_cfg["owner_id"]:
+    if app_cfg.get("owner_id") and str(interaction.user.id) == str(app_cfg["owner_id"]):
         return True
     
     # Check guild owners
-    if interaction.user.id in guild_cfg.get("owners", []):
+    guild_owners = [str(x) for x in guild_cfg.get("owners", [])]
+    if str(interaction.user.id) in guild_owners:
         return True
     
     # Check if user is guild owner

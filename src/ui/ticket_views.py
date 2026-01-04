@@ -1,5 +1,6 @@
 import discord
 from datetime import datetime
+import asyncio
 from src import storage
 from src.tickets.utils import get_ticket, close_ticket
 from src.tickets.permissions import is_owner, has_staff_privs
@@ -68,4 +69,12 @@ class OpenedTicketView(discord.ui.View):
         
         # Log ticket closure (this will also generate transcript)
         await BotLogger.log_ticket_closed(interaction.guild, interaction.channel, interaction.user, ticket)
+        
+        # Delete channel after a short delay
+        await interaction.followup.send("❌ Deleting ticket in 5 seconds...", ephemeral=True)
+        await asyncio.sleep(5)
+        try:
+            await interaction.channel.delete(reason="Ticket closed")
+        except Exception as e:
+            await interaction.followup.send(f"❌ Error deleting channel: {e}", ephemeral=True)
 
