@@ -2,6 +2,10 @@
 
 A comprehensive Discord bot for managing a Hypixel account shop with ticket systems, MFA trading, coin trading, and vouch system.
 
+# For Support 
+
+Join https://discord.gg/HFcmR38Jbf
+
 ## Features
 
 ### 🎫 Ticket System
@@ -155,10 +159,5 @@ bot/
 /vouch seller:@User product:"Hypixel Account" value:50.00 review:"Great seller!" rating:5
 ```
 
-## Support
 
-For issues or questions, contact the bot owner.
 
-## Credits
-
-Developed for Skyuub's Slave - Hypixel Account Shop
